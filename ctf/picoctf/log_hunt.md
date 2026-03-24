@@ -7,11 +7,13 @@ Analyze the server log to find parts of the flag.
 The log file likely contains pieces of the flag labeled as FLAGPART.
 
 ## Solution
+```bash
 $ cd Downloads
 $ ls
 $ cat Server.log
 $ wc -l Server.log
 $ grep FLAGPART Server.log | cut -d ":" -f4 | sort | uniq
+```
 
 ## Explanation
 - grep FLAGPART: filters lines containing FLAGPART
